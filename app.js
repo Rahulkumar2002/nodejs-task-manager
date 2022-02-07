@@ -8,7 +8,7 @@ const tasks = require("./routes/tasks")
 const notFound = require("./middleware/not-found")
 const errorHandlerMiddleware = require("./middleware/error-handler")
 
-const port = 8080 || process.env.PORT
+const port = process.env.PORT || 8080
 dotenv.config()
 
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then(console.log("Connected to MongoDB...."))
